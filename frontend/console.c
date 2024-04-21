@@ -1,3 +1,5 @@
+#define NCURSES_STATIC
+
 #ifdef HAVE_CONFIG_H
 # include <config.h>
 #endif
@@ -23,6 +25,7 @@ char   *strchr(), *strrchr();
 # include <termcap.h>
 #elif defined(HAVE_TERMCAP)
 # include <curses.h>
+#include <ncurses/ncurses.h>
 # if !defined(__bsdi__)
 #  include <term.h>
 # endif
